@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angula
 import { CommonModule } from '@angular/common';
 import { Despesa } from './despesa';
 import { Chart, registerables } from 'chart.js';
+import { Firestore, collection, addDoc } from '@angular/fire/firestore';
+import { inject } from '@angular/core';
 
 // Registra os módulos do Chart.js
 Chart.register(...registerables);
@@ -14,6 +16,22 @@ Chart.register(...registerables);
   styleUrls: ['./app.css']
 })
 export class AppComponent implements OnInit, AfterViewInit {
+
+private firestore: Firestore = inject(Firestore); // Injeta o banco
+
+  async enviarParaOFirebase() {
+  try {
+    const colRef = collection(this.firestore, 'testes'); // Nome da "pasta" no banco
+    await addDoc(colRef, {
+      mensagem: "FUNCIONOU TWIN!",
+      dataEnvio: new Date(),
+      status: "Online e Roteando"
+    });
+    alert('Dado salvo no Firebase com sucesso! ☁️🔥');
+  } catch (e) {
+    console.error("Erro ao salvar: ", e);
+  }
+}
 
   @ViewChild('meuGrafico', { static: true }) canvas!: ElementRef;
   chart: any;
