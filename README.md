@@ -2,11 +2,11 @@
 
 Um dashboard financeiro moderno, rápido e intuitivo construído com **Angular 18** e **Tailwind CSS**.
 
-![Preview do Projeto](<img width="1365" height="646" alt="1" src="https://github.com/user-attachments/assets/b34f8c25-6fad-48a9-8321-636386b213f2" />
-)
+![Preview do Projeto <img width="1365" height="646" alt="1" src="https://github.com/user-attachments/assets/b34f8c25-6fad-48a9-8321-636386b213f2" />]
 
-![Preview do Projeto - 2 (<img width="1365" height="647" alt="2" src="https://github.com/user-attachments/assets/19d351ac-64aa-4cd8-a78f-1d588c6b9659" />
-)]
+
+![Preview do Projeto - 2 <img width="1365" height="647" alt="2" src="https://github.com/user-attachments/assets/19d351ac-64aa-4cd8-a78f-1d588c6b9659" />
+]
 
 ## 🚀 Funcionalidades
 - **Modo Dark Nativo**: Interface pensada para conforto visual.
